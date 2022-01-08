@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TitledPane collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="600.0" text="Cadastro de Conta" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.HelloController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="346.0" prefWidth="598.0">
+         <children>
+            <TextField fx:id="agencia" layoutX="37.0" layoutY="20.0" promptText="Agência" />
+            <TextField fx:id="nconta" layoutX="37.0" layoutY="71.0" promptText="Número da Conta" />
+            <TextField fx:id="titular" layoutX="37.0" layoutY="121.0" promptText="Titular" />
+            <Accordion layoutX="215.0" layoutY="21.0" prefHeight="180.0" prefWidth="365.0">
+              <panes>
+                <TitledPane fx:id="contacorrente" prefHeight="164.0" prefWidth="363.0" text="Conta Corrente">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="251.0">
+                           <children>
+                              <TextField fx:id="tarifa" layoutX="96.0" layoutY="33.0" promptText="Tarifa" />
+                              <TextField fx:id="gerente" layoutX="96.0" layoutY="75.0" promptText="Gerente" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane fx:id="contapoupanca" text="Conta Poupança">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="93.0" prefWidth="251.0">
+                           <children>
+                              <TextField fx:id="vencimento" layoutX="93.0" layoutY="52.0" promptText="Dia vencimento" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+            <Button layoutX="147.0" layoutY="236.0" mnemonicParsing="false" onAction="#deposito" text="Deposito" />
+            <Button layoutX="360.0" layoutY="236.0" mnemonicParsing="false" onAction="#saque" text="Saque" />
+            <TextField fx:id="valor" layoutX="211.0" layoutY="236.0" promptText="Valor" />
+            <Button layoutX="37.0" layoutY="236.0" mnemonicParsing="false" onAction="#cadastrar" text="Cadastrar" />
+            <TitledPane layoutX="14.0" layoutY="279.0" text="Contas">
+               <content>
+                  <TextArea fx:id="contas" prefHeight="165.0" prefWidth="575.0" wrapText="true" />
+               </content>
+            </TitledPane>
+         </children></AnchorPane>
+  </content>
+</TitledPane>
